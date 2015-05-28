@@ -1,0 +1,12 @@
+C:\Users\Geert\Desktop\Path of Vision Project\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\Geert\Desktop\Path of Vision Project\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\Geert\Desktop\Path of Vision Project\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\Geert\Desktop\Path of Vision Project\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\Geert\Desktop\Path of Vision Project\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\Geert\Desktop\Path of Vision Project\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\Geert\Desktop\Path of Vision Project\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\Geert\Desktop\Path of Vision Project\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\Geert\Desktop\Path of Vision Project\obj\Debug\UnityVS.Path of Vision Project.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Geert\Desktop\Path of Vision Project\obj\Debug\Assembly-CSharp.dll
+C:\Users\Geert\Desktop\Path of Vision Project\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Geert\Desktop\Path of Vision Project\Temp\UnityVS_bin\Debug\Assembly-UnityScript-firstpass.dll

@@ -1,0 +1,33 @@
+A:\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+A:\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+A:\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEditor.dll
+A:\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.dll
+A:\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+A:\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.xml
+A:\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEditor.xml
+A:\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+A:\Google Drive\Unity\Path of Vision\obj\Debug\UnityVS.Path of Vision.CSharp.csprojResolveAssemblyReference.cache
+A:\Google Drive\Unity\Path of Vision\obj\Debug\Assembly-CSharp.dll
+A:\Google Drive\Unity\Path of Vision\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Geert\Desktop\Path of Vision\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\Geert\Desktop\Path of Vision\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\Geert\Desktop\Path of Vision\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\Geert\Desktop\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\Geert\Desktop\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\Geert\Desktop\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\Geert\Desktop\Path of Vision\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\Geert\Desktop\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\Geert\Desktop\Path of Vision\obj\Debug\UnityVS.Path of Vision.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Geert\Desktop\Path of Vision\obj\Debug\Assembly-CSharp.dll
+C:\Users\Geert\Desktop\Path of Vision\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Geert\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\Geert\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\Geert\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\Geert\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\Geert\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\Geert\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\Geert\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\Geert\Google Drive\Unity\Path of Vision\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\Geert\Google Drive\Unity\Path of Vision\obj\Debug\UnityVS.Path of Vision.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Geert\Google Drive\Unity\Path of Vision\obj\Debug\Assembly-CSharp.dll
+C:\Users\Geert\Google Drive\Unity\Path of Vision\obj\Debug\Assembly-CSharp.pdb

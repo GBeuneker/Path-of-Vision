@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: 2f53d3ca5d3ff6144a6d8569b665fe26
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Healthbar 1
+    21300002: Healthbar 2
+    21300004: Healthbar 3
+    21300006: Healthbar 4
+    21300008: Healthbar 5
+    21300010: Healthbar 6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Healthbar 1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 245
+        width: 359
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Healthbar 2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 214
+        width: 345
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Healthbar 3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 177
+        width: 360
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Healthbar 4
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 110
+        width: 360
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Healthbar 5
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 48
+        width: 360
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Healthbar 6
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 19
+        width: 347
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
