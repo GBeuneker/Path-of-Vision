@@ -32,6 +32,11 @@ public class Enemy
         get { return this.room; }
     }
 
+    public GameObject enemyObject
+    {
+        get { return Resources.Load<GameObject>(this.path); }
+    }
+
     public float TriggerRange
     {
         get;

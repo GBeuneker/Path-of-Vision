@@ -18,8 +18,10 @@ public class TwoHandedButtonScript : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            if (collider2D.OverlapPoint(MobileInput.TouchPosition) && !Pressed)
+            if (collider2D.OverlapPoint(MobileInput.TouchPosition))
                 Pressed = true;
+            else
+                Pressed = false;
         }
         else
             Pressed = false;

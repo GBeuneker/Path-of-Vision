@@ -30,7 +30,7 @@ public class BossRoom : Room
     public void SpawnBoss()
     {
         Enemy randomBoss = new Enemy(RandomBossPath(), this);
-        randomBoss.LocalPosition = hatchPosition;
+        randomBoss.LocalPosition = hatchPosition - new Vector2(0, (randomBoss.enemyObject.renderer.bounds.size.y / 2));
 
         if (randomBoss.LocalPosition != Vector2.zero)
             enemyList.Add(randomBoss);

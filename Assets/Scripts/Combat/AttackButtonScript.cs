@@ -39,13 +39,15 @@ public class AttackButtonScript : MonoBehaviour
         {
             if (weapon.GetComponent<WeaponStats>().itemType == WeaponStats.ItemType.TwoHanded)
             {
-                if (Input.touchCount > 1)
+                if (Input.touchCount >= 1)
                 {
-                    Touch touch = Input.touches[1];
-                    if (touch.phase == TouchPhase.Began)
+                    foreach(Touch touch in Input.touches)
                     {
-                        if (collider2D.OverlapPoint(MobileInput.TouchPosition) && twoHanded.Pressed)
-                            Attack();
+                        if (touch.phase == TouchPhase.Began)
+                        {
+                            if (collider2D.OverlapPoint(MobileInput.GetWorldPosition(touch.position)) && twoHanded.Pressed)
+                                Attack();
+                        }
                     }
                 }
             }

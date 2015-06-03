@@ -9,7 +9,6 @@ public class RoomDrawing : MonoBehaviour
     List<GameObject> currentRoomEnemies;
     Dictionary<Vector2, GameObject> mapOfRooms = new Dictionary<Vector2, GameObject>();
     Room currentRoom;
-    public GameObject tile;
     public float tileWidth, tileHeight;
 
     // Use this for initialization
@@ -17,6 +16,7 @@ public class RoomDrawing : MonoBehaviour
     {
         currentRoomObjects = new List<GameObject>();
         currentRoomEnemies = new List<GameObject>();
+        GameObject tile = Resources.Load<GameObject>("Background Prefabs/Base Tile");
         tileWidth = tile.GetComponent<SpriteRenderer>().bounds.size.x;
         tileHeight = tile.GetComponent<SpriteRenderer>().bounds.size.y;
         MasterScript.tileWidth = this.tileWidth;
@@ -27,6 +27,9 @@ public class RoomDrawing : MonoBehaviour
     {
         DestroyPreviousRoom();
         ShowRoomOnMap(room);
+
+        room.RoomMesh.SetActive(true);
+
         currentRoom = room;
         currentRoomObjects = new List<GameObject>();
         currentRoomEnemies = new List<GameObject>();
@@ -40,26 +43,17 @@ public class RoomDrawing : MonoBehaviour
                 float yPos = y * this.tileHeight;
                 switch (room.GetTile(x, y))
                 {
-                    case '#':
-                    case '|':
-                        AddTile(xPos, yPos, "Background Prefabs/Wall");
+                    case '+': //Door position
+                        SpawnObject(xPos, yPos, "Background Prefabs/Closed Door");
                         break;
-                    case '-':
-                        AddTile(xPos, yPos, "Background Prefabs/Ground");
+                    case '=': //Open door position
+                        SpawnObject(xPos, yPos, "Background Prefabs/Open Door");
                         break;
                     case '*': // Key position
                         SpawnKey(xPos, yPos, room);
-                        AddTile(xPos, yPos, "Background Prefabs/Ground");
                         break;
                     case '!': // Chest position
                         SpawnChest(xPos, yPos, (ChestRoom)room);
-                        AddTile(xPos, yPos, "Background Prefabs/Ground");
-                        break;
-                    case '+': // Hatch position
-                        AddTile(xPos, yPos, "Background Prefabs/ClosedHatch");
-                        break;
-                    case '=': //Stairs position
-                        AddTile(xPos, yPos, "Background Prefabs/OpenHatch");
                         break;
                     default:
                         break;
@@ -157,6 +151,8 @@ public class RoomDrawing : MonoBehaviour
 
         if (currentRoom != null)
         {
+            currentRoom.RoomMesh.SetActive(false);
+
             //Remove killed enemies
             currentRoom.enemyList.RemoveRange(currentRoomEnemies.Count, currentRoom.enemyList.Count - currentRoomEnemies.Count);
             mapOfRooms[currentRoom.RoomLocation].GetComponent<Image>().color = new Color(0.8f, 0.8f, 0.8f);
@@ -168,14 +164,6 @@ public class RoomDrawing : MonoBehaviour
             }
         }
 
-    }
-
-    void AddTile(float xPos, float yPos, string path)
-    {
-        GameObject loadedTile = Resources.Load<GameObject>(path);
-        GameObject newTile = (GameObject)Instantiate(loadedTile, new Vector3(xPos, yPos, 0), loadedTile.transform.rotation);
-
-        currentRoomObjects.Add(newTile);
     }
 
     void SpawnChest(float xPos, float yPos, ChestRoom room)
@@ -190,6 +178,13 @@ public class RoomDrawing : MonoBehaviour
         key = (GameObject)Instantiate(key, new Vector3(xPos, yPos, 0), key.transform.rotation);
         currentRoom.Key = key;
         currentRoomObjects.Add(key);
+    }
+
+    void SpawnObject(float xPos, float yPos, string path)
+    {
+        GameObject roomObject = Resources.Load<GameObject>(path);
+        roomObject = (GameObject)Instantiate(roomObject, new Vector3(xPos, yPos, 0), roomObject.transform.rotation);
+        currentRoomObjects.Add(roomObject);
     }
 
     void SpawnEnemy(Enemy enemy)

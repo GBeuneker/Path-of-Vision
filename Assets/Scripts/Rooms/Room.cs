@@ -12,7 +12,7 @@ public class Room
     protected Room right, left, up, down;
     public Vector2 rightSpawn, leftSpawn, upSpawn, downSpawn;
 
-    GameObject key;
+    GameObject key, roomMesh;
     Vector2 keyPosition;
 
     public Room(List<string> roomLayout)
@@ -20,6 +20,28 @@ public class Room
         this.roomLayout = roomLayout;
         enemyList = new List<Enemy>();
         lootList = new List<GameObject>();
+    }
+
+    public void MakeRoomMesh()
+    {
+        GameObject tilePrefab = Resources.Load<GameObject>("Background Prefabs/Base Tile");
+        float tileWidth = tilePrefab.renderer.bounds.size.x;
+        float tileHeight = tilePrefab.renderer.bounds.size.y;
+
+        GameObject roomBackground = Resources.Load<GameObject>("Background Prefabs/TileMap");
+        Vector3 meshPosition = new Vector3(-tileWidth / 2, -tileHeight / 2, 0);
+        roomBackground = (GameObject)MonoBehaviour.Instantiate(roomBackground, meshPosition, Quaternion.identity);
+        roomBackground.name = Name;
+        TileBuilder tileBuilder = roomBackground.GetComponent<TileBuilder>();
+        tileBuilder.BuildMesh(Width + 1, Height + 1, new Vector2(tileWidth, tileHeight));
+        tileBuilder.BuildTextures(this);
+
+
+        GameObject wasteBin = GameObject.Find("_Wastebin");
+        roomBackground.transform.SetParent(wasteBin.transform);
+        roomBackground.transform.localScale = Vector3.one;
+        roomBackground.SetActive(false);
+        this.roomMesh = roomBackground;
     }
 
     public char GetTile(int x, int y)
@@ -67,7 +89,7 @@ public class Room
             Enemy randomEnemy = new Enemy(RandomEnemyPath(), this);
             randomEnemy.LocalPosition = RandomFreePosition();
 
-            if(randomEnemy.LocalPosition != Vector2.zero)
+            if (randomEnemy.LocalPosition != Vector2.zero)
                 enemyList.Add(randomEnemy);
         }
     }
@@ -94,7 +116,7 @@ public class Room
                 if ((loot.transform.position - MasterScript.GetRealPosition(localAnswer)).magnitude <= 0.1f ||
                     GetTile((int)localAnswer.x, (int)localAnswer.y) != '-')
                 {
-                    if(WithinRange(localAnswer + neighbours[i]))
+                    if (WithinRange(localAnswer + neighbours[i]))
                         localAnswer = localPosition + neighbours[i];
                     free = false;
                     //If we exploited all possible actions and there is still no free spot
@@ -102,11 +124,11 @@ public class Room
                         return Vector3.zero;
                 }
             }
-            if(free)
+            if (free)
                 break;
         }
 
-        return  MasterScript.GetRealPosition(localAnswer);
+        return MasterScript.GetRealPosition(localAnswer);
     }
 
     public void SaveLoot(GameObject obj)
@@ -283,5 +305,17 @@ public class Room
         get { return this.roomLayout.Count; }
     }
 
+    public string Name
+    {
+        get
+        {
+            return "Room: " + RoomLocation.x + ", " + RoomLocation.y;
+        }
+    }
+
+    public GameObject RoomMesh
+    {
+        get { return roomMesh; }
+    }
     #endregion
 }

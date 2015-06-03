@@ -8,17 +8,21 @@ public class MasterScript : MonoBehaviour
     static int currentFloor;
     static Dungeon currentDungeon;
     static GameObject wasteBin;
+    public static Dictionary<string, GameObject> roomMeshes = new Dictionary<string, GameObject>();
     public static float tileWidth, tileHeight;
     public static bool stopMovement;
     public static bool stopControls;
     static bool inEncounter;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         currentFloor = 0;
         stopMovement = false;
         wasteBin = GameObject.Find("_Wastebin");
+        GameObject groundTile = Resources.Load<GameObject>("Background Prefabs/Base Tile");
+        tileWidth = groundTile.renderer.bounds.size.x;
+        tileHeight = groundTile.renderer.bounds.size.y;
     }
 
     public static void NextFloor()
@@ -49,7 +53,7 @@ public class MasterScript : MonoBehaviour
         set
         {
             inEncounter = value;
-            if(inEncounter)
+            if (inEncounter)
             {
                 stopMovement = true;
             }
@@ -64,10 +68,11 @@ public class MasterScript : MonoBehaviour
     {
         if (wasteBin == null)
             return;
-        foreach(Transform g in wasteBin.GetComponentInChildren<Transform>())
+        foreach (Transform g in wasteBin.GetComponentInChildren<Transform>())
         {
             Destroy(g.gameObject);
         }
+        roomMeshes.Clear();
     }
 
 }

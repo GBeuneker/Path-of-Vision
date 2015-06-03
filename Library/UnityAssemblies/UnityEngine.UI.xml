@@ -4,5 +4,8 @@
 		<name>UnityEngine.UI</name>
 	</assembly>
 	<members>
+		<member name="T:UnityEngine.UI.CanvasScaler/ScaleMode">
+			<summary></summary>
+		</member>
 	</members>
 </doc>

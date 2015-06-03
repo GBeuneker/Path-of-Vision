@@ -10,7 +10,7 @@ public class Dungeon
 {
     List<Room> rooms;
     Room startRoom;
-    Room[,] roomGrid;
+    public Room[,] roomGrid;
     public BossRoom bossRoom;
 
     public Dungeon(int floor)
@@ -23,6 +23,8 @@ public class Dungeon
 
         int roomAmount = CalculateRoomAmount(floor);
         GenerateDungeon(roomAmount, startRoom);
+        foreach (Room room in rooms)
+            room.MakeRoomMesh();
     }
 
     private int CalculateRoomAmount(int floor)
