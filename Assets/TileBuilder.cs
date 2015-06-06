@@ -49,12 +49,6 @@ public class TileBuilder : MonoBehaviour
                     case '!': // Chest position
                         texture.SetPixels(x * tileWidth, y * tileHeight, tileWidth, tileHeight, GetPixelsFromSprite(ground));
                         break;
-                    case '+': // Hatch position
-                        //texture.SetPixels(x * tileWidth, y * tileHeight, tileWidth, tileHeight, Color.black);
-                        break;
-                    case '=': // Open Hatch position
-                        //texture.SetPixels(x * tileWidth, y * tileHeight, tileWidth, tileHeight, GetPixelsFromSprite(ground));
-                        break;
                     default:
                         break;
                 }

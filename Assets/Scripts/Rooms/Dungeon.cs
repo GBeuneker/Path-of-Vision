@@ -175,6 +175,7 @@ public class Dungeon
         TextAsset file = Resources.Load<TextAsset>("Room Layouts/" + roomType + " " + roomIndex);
 
         string text = file.text;
+        text = text.Replace("\r", "");
         textLines = text.Split('\n').ToList();
 
         return textLines;

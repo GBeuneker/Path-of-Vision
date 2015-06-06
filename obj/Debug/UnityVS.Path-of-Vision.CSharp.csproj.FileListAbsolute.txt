@@ -1,0 +1,9 @@
+C:\Users\Geert\Documents\GitHub\Path-of-Vision\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\Geert\Documents\GitHub\Path-of-Vision\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\Geert\Documents\GitHub\Path-of-Vision\Temp\UnityVS_bin\Debug\Assembly-UnityScript-firstpass.dll
+C:\Users\Geert\Documents\GitHub\Path-of-Vision\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\Geert\Documents\GitHub\Path-of-Vision\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\Geert\Documents\GitHub\Path-of-Vision\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\Geert\Documents\GitHub\Path-of-Vision\obj\Debug\UnityVS.Path-of-Vision.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Geert\Documents\GitHub\Path-of-Vision\obj\Debug\Assembly-CSharp.dll
+C:\Users\Geert\Documents\GitHub\Path-of-Vision\obj\Debug\Assembly-CSharp.pdb
